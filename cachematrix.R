@@ -2,8 +2,8 @@
 ## It cached the inverse of a matrix (potentially time-consuming computation)
 ## rather than compute it repeatedly.
 
-## The function makeCacheMatrix creates a special 'matrix'  object
-## that can cache its inverse. 
+## The function makeCacheMatrix creates a special 'matrix'  object that can
+## cache its inverse. 
 makeCacheMatrix <- function(x = numeric()) {
         inv <- NULL
         set <- function(y) {      #setting matrix
@@ -17,7 +17,7 @@ makeCacheMatrix <- function(x = numeric()) {
         
         list(set = set, get =get,            #setting list of functions
              setinverse = setinverse, 
-             getinverse = getinverse)        
+             getinverse = getinverse)       
         
 }
 
@@ -32,5 +32,5 @@ cacheSolve <- function(x, ...) {
         inv <- solve(data, ...)
         x$setinverse(inv)
         inv
-        
+
 }
